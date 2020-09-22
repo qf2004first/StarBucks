@@ -1,23 +1,44 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'App'
+  name:"App",
+  data:function(){
+    return {
+    }
+  }
 }
+
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+          *{margin: 0; padding: 0;}
+            li{list-style: none;}
+            a{text-decoration:none;}
+            i,em{font-style: normal;}
+            b,strong{font-weight: normal;}
+            h1,h2,h3,h4,h5,h6{font-size: 16px; font-weight: normal;}
+            img{vertical-align: middle; border: none;}
+            html{
+              font-size: 26.6vw;
+              height: 100%;
+            }
+            body{
+              font-size: 16px;
+              height: 100%;
+              overflow: auto;
+            }
+.safe{
+  width: 3.5rem;
+  margin: auto;
 }
+
 </style>
+
+

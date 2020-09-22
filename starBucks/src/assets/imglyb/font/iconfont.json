@@ -1,0 +1,114 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "359492",
+      "name": "i 查询",
+      "font_class": "ichaxun",
+      "unicode": "e72c",
+      "unicode_decimal": 59180
+    },
+    {
+      "icon_id": "2333449",
+      "name": "眼睛",
+      "font_class": "yanjing",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "7630952",
+      "name": "发票",
+      "font_class": "fapiao",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "8442232",
+      "name": "关  闭",
+      "font_class": "guanbi",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "11435298",
+      "name": "设 置",
+      "font_class": "shezhi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "12106805",
+      "name": "扫描二维码",
+      "font_class": "Mask",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "12106812",
+      "name": "扫描二维码",
+      "font_class": "Mask1",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "12250357",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "12463333",
+      "name": "关 闭",
+      "font_class": "guanbi1",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "13695103",
+      "name": "钥匙",
+      "font_class": "yuechi",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "13762389",
+      "name": "优惠券",
+      "font_class": "youhuiquan",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "14390755",
+      "name": "消费记录",
+      "font_class": "xiaofeijilu",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "14917242",
+      "name": "关闭眼睛",
+      "font_class": "eye-close",
+      "unicode": "e501",
+      "unicode_decimal": 58625
+    },
+    {
+      "icon_id": "16058036",
+      "name": "返 回",
+      "font_class": "fanhui",
+      "unicode": "e9a2",
+      "unicode_decimal": 59810
+    },
+    {
+      "icon_id": "16630515",
+      "name": "大于",
+      "font_class": "dayu",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    }
+  ]
+}

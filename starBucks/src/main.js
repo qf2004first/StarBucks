@@ -2,7 +2,18 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+import axios from 'axios'
+import router from "./router";
+// import "./utils/request";
+// import router from './router/lybrouter'
+import Vant from 'vant';
+
+import 'vant/lib/index.css';
+Vue.use(Vant);
+// axios请求的基准路径。
+// axios.defaults.baseURL = "http://10.35.167.162:8080";
+ axios.defaults.baseURL = "/api";
+
 
 Vue.config.productionTip = false
 
