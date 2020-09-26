@@ -47,14 +47,21 @@
 
         if(this.password==this.password1)
         {
-          let ss=localStorage.getItem("userName");
+          // let ss=localStorage.getItem("userName");
+		  let params = new URLSearchParams();
+		    params.append("password", this.password); 
           console.log(ss);
-            let str1="/user/updatePass/"+ ss+"/"+this.password;
             axios({
-              url: str1,
-              method: "post"
+              url: "/api/user/alterpwd/",
+              method: "post",
+			  data:params
             }).then(res=>{
-              console.log(res.data);
+				if(res.data.code==0){
+					Toast({
+					  message: '重置成功',
+					  position: 'top',
+					});
+				}
             })
 
 

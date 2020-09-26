@@ -14,6 +14,13 @@ Vue.use(Vant);
 // axios.defaults.baseURL = "http://10.35.167.162:8080";
  axios.defaults.baseURL = "/api";
 
+axios.interceptors.request.use(config => {
+  if(localStorage.getItem("token")){
+    config.headers.Authorization = 'Token ' + localStorage.getItem("token")
+    }
+    return config
+})
+
 
 Vue.config.productionTip = false
 

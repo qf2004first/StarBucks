@@ -74,14 +74,21 @@
       tels() {
         let zheng = this.ze();
         if (zheng) {
-
-
-          let st="/user/getCode/"+this.msg;
           axios({
-            url: st,
-            method: "post"
-
-          })
+            url: "/api/user/register/",
+            method: "get",
+			params:{
+				'tel':this.msg
+			}
+          }).then(res=>{
+			  if(res.data.code==0)
+			  {
+				  console.log("发送成功");
+			  }
+			  else{
+				   console.log("发送失败");
+			  }
+		  })
 
         }
       },
@@ -96,27 +103,31 @@
 
           } else {
 
-            //post
+           let params = new URLSearchParams(); 
+             params.append("tel", this.msg); 
+             params.append("code", this.msg1); 
 
-            let str1="/user/loginOrRegister/"+ this.msg+"/"+this.msg1;
             axios({
-              url: str1,
-              method: "post"
+              url: "/api/user/register/",
+              method: "post",
+			  data:params
             }).then(res => {
-              if (res.data.code != 200) {
+              if (res.data.code != 0) {
                 console.log(res.data);
                 Toast({
                   message: '手机号或验证码输入有误',
                   position: 'top',
                 });
               } else {
-                //console.log(res);
+                console.log(res);
                 localStorage.setItem("userName", "");
-                localStorage.userName = res.data.data.uName;
+                localStorage.userName = res.data.username;
                  localStorage.setItem("userID", "");
-                 localStorage.userID = res.data.data.iId;
+                 localStorage.userID = res.data.iId;
                  localStorage.setItem("uTel", "");
-                 localStorage.uTel = res.data.data.uTel;
+                 localStorage.uTel = res.data.tel;
+							 localStorage.setItem("token", "");
+							 localStorage.token = res.data.token;
                 Toast({
                   message: '登录成功',
                   position: 'top',

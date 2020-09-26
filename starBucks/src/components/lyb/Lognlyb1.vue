@@ -52,23 +52,29 @@
     },
     methods: {
       sub() {
-        let str = /^[a-z0-9_-]{3,16}$/;
+        let str = /^[a-zA-Z0-9_-]{3,16}$/;
         let pwd = /^[a-z0-9_-]{6,18}$/;
         if (str.test(this.msg)) {
           if (pwd.test(this.msg1)) {
-            let str1 = "/user/login/" + this.msg + "/" + this.msg1;
-
+            // let str1 = "/user/login/" + this.msg + "/" + this.msg1;
+			let params = new URLSearchParams();
+			  params.append("username", this.msg); 
+			  params.append("password", this.msg1); 
+			
             axios({
-              url: str1,
-              method: "post"
+              url: "/api/user/login/",
+              method: "post",
+				data:params			
             }).then(res => {
-               if (res.data.code == 200) {
-               localStorage.setItem("userName", "");
-               localStorage.userName = res.data.data.uName;
-                localStorage.setItem("userID", "");
-                localStorage.userID = res.data.data.uId;
-                localStorage.setItem("uTel", "");
-                 localStorage.uTel = res.data.data.uTel;
+               if (res.data.code == 0) {
+              localStorage.setItem("userName", "");
+              localStorage.userName = res.data.username;
+               localStorage.setItem("userID", "");
+               localStorage.userID = res.data.iId;
+               localStorage.setItem("uTel", "");
+               localStorage.uTel = res.data.tel;
+               localStorage.setItem("token", "");
+               localStorage.token = res.data.token;
                 Toast({
                   message: '登录成功',
                   position: 'top',

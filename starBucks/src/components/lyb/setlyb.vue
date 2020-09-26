@@ -38,8 +38,20 @@
         this.msg=!this.msg
       },
       tuichu(){
-          localStorage.setItem("userName","");
-          this.$router.push("menbers");
+		  axios({
+		    url: "/api/user/login/",
+		    method: "delete",
+			
+		  }).then(res=>{
+			  if(res.data.code==0)
+			  {
+				   localStorage.clear();
+				    this.$router.push("menbers");
+			  }
+		  })
+		  
+          // localStorage.setItem("userName","");
+         
       }
     }
 
